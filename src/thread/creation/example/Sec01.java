@@ -1,12 +1,15 @@
 package thread.creation.example;
 
-public class Main {
+/**
+ * 스레드 생성 - 스레드의 기능과 디버깅
+ */
+public class Sec01 {
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                // 운영체제가 스케쥴링하자마자 새 스레드에서 실행할 코드
+                // 새 스레드에서 실행할 코드
                 System.out.println("스레드 시작 : " + Thread.currentThread().getName());
                 System.out.println("현재 스레드의 우선순위 : " + Thread.currentThread().getPriority());
                 throw new RuntimeException("에러 메세지");
